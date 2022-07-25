@@ -2,7 +2,7 @@
 
 This API is deploy on Microsoft Azure Services and create with ASP.NET Core 6
 
-You can test the end-point using the curl command on the terminal or in the browser.
+You can test the end-point using the curl command on the terminal or with Postman.
 
 ### Exemple:
     
@@ -11,10 +11,11 @@ You can test the end-point using the curl command on the terminal or in the brow
 ```bash
     curl -X 'GET' \ 'https://rocketelevators-api.azurewebsites.net/api/Building'
 ```
-* In the browser using Swagger:
+* In the browser using Postman:
 
-    https://rocketelevators-api.azurewebsites.net/swagger/index.html
+    https://rocketelevators-api.azurewebsites.net/swagger/v1/swagger.json
 
+***You can create a new collection in Postman to test the endpoint 
 
 
 ## Exemple of endpoint list : 
