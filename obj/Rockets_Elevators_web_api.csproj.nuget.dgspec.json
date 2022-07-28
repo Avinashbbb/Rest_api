@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/razakadegoke/Desktop/CODEBOXX_summer_cohort/ODYSSEY/week_7/Rockets_Elevators_web_api/Rockets_Elevators_web_api.csproj": {}
+    "C:\\Users\\avina\\Desktop\\Coddboxx\\Rest_api\\Rockets_Elevators_web_api.csproj": {}
   },
   "projects": {
-    "/Users/razakadegoke/Desktop/CODEBOXX_summer_cohort/ODYSSEY/week_7/Rockets_Elevators_web_api/Rockets_Elevators_web_api.csproj": {
+    "C:\\Users\\avina\\Desktop\\Coddboxx\\Rest_api\\Rockets_Elevators_web_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/razakadegoke/Desktop/CODEBOXX_summer_cohort/ODYSSEY/week_7/Rockets_Elevators_web_api/Rockets_Elevators_web_api.csproj",
+        "projectUniqueName": "C:\\Users\\avina\\Desktop\\Coddboxx\\Rest_api\\Rockets_Elevators_web_api.csproj",
         "projectName": "Rockets_Elevators_web_api",
-        "projectPath": "/Users/razakadegoke/Desktop/CODEBOXX_summer_cohort/ODYSSEY/week_7/Rockets_Elevators_web_api/Rockets_Elevators_web_api.csproj",
-        "packagesPath": "/Users/razakadegoke/.nuget/packages/",
-        "outputPath": "/Users/razakadegoke/Desktop/CODEBOXX_summer_cohort/ODYSSEY/week_7/Rockets_Elevators_web_api/obj/",
+        "projectPath": "C:\\Users\\avina\\Desktop\\Coddboxx\\Rest_api\\Rockets_Elevators_web_api.csproj",
+        "packagesPath": "C:\\Users\\avina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\avina\\Desktop\\Coddboxx\\Rest_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/razakadegoke/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\avina\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

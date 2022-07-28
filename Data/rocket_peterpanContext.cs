@@ -32,6 +32,7 @@ namespace Rockets_Elevators_web_api
         public virtual DbSet<Quote> Quotes { get; set; } = null!;
         public virtual DbSet<SchemaMigration> SchemaMigrations { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<Intervention> Interventions { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -664,6 +665,48 @@ namespace Rockets_Elevators_web_api
                 entity.Property(e => e.UpdatedAt)
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
+            });
+
+            modelBuilder.Entity<Intervention>(entity =>
+            {
+                entity.ToTable("interventions");
+
+
+
+                entity.Property(e => e.id).HasColumnName("id");
+
+                entity.Property(e => e.author)
+                    .HasMaxLength(255)
+                    .HasColumnName("author");
+
+                entity.Property(e => e.interventionDateStart).HasColumnName("interventionDateStart");
+
+                entity.Property(e => e.interventionDateEnd).HasColumnName("interventionDateEnd");
+
+                entity.Property(e => e.result)
+                    .HasMaxLength(255)
+                    .HasColumnName("result");
+
+                entity.Property(e => e.report)
+                    .HasMaxLength(255)
+                    .HasColumnName("report");
+
+                entity.Property(e => e.status)
+                    .HasMaxLength(255)
+                    .HasColumnName("status");
+
+                entity.Property(e => e.customer_id).HasColumnName("customer_id");
+
+                entity.Property(e => e.employee_id).HasColumnName("employee_id");
+
+                entity.Property(e => e.building_id).HasColumnName("building_id");
+
+                entity.Property(e => e.batterie_id).HasColumnName("batterie_id");
+
+                entity.Property(e => e.column_id).HasColumnName("column_id");
+
+                entity.Property(e => e.elevator_id).HasColumnName("elevator_id");
+
             });
 
             OnModelCreatingPartial(modelBuilder);
