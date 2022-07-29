@@ -15,7 +15,7 @@ namespace Rockets_Elevators_web_api.Controllers
         [HttpGet("{status}")]//("{id}")
         public async Task<IActionResult> GetInterventionBystatus(string status)
         {
-            var intervention =  _context.Interventions.Where(i => (i.status == status) && (i.interventionDateStart == null || i.interventionDateStart == "nil"));
+            var intervention =  _context.Interventions.Where(i => (i.status == status) && (i.interventionDateStart == null || i.interventionDateStart == "nil"||i.interventionDateStart == ""));
             if (intervention == null) return NotFound();
             return Ok(intervention);
         }
