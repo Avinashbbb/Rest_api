@@ -26,7 +26,7 @@ namespace Rockets_Elevators_web_api.Controllers
         }
 
         //gives building address
-        [HttpGet("/buildingaddress{id}")]// customer id
+        [HttpGet("/buildingaddress/{id}")]// customer id
         public async Task<IActionResult> GetCustomerBuildingAdress(long id)
         {
             var customerBuildings =  _context.Buildings.Where(b => b.CustomerId == id);
