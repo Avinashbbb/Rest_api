@@ -25,6 +25,15 @@ namespace Rockets_Elevators_web_api.Controllers
 
         }
 
+        [HttpGet("/customerobj/{email}")]
+        public async Task<IActionResult> GetCustomerObject(string email)
+        {
+            var customers =  _context.Customers.Where(c => c.Email == email);
+            
+            return Ok(customers);
+
+        }
+
         //gives building address
         [HttpGet("/buildingaddress/{id}")]// customer id
         public async Task<IActionResult> GetCustomerBuildingAdress(long id)
@@ -107,6 +116,20 @@ namespace Rockets_Elevators_web_api.Controllers
             return Ok(customerElevatorId);
         }
 
+        [HttpPost("/{CUSTOMERID}/{BUILDINGID}/{BATTERYID}/{COLUMNID}/{ELEVATORID}/{DESCRIPTION}")]
+        public  JsonResult GetCustomerIntervention( long customerId ,long buildingId ,long batteryId, long columnId ,long elevatorId , string description, Intervention newIntervention )
+        {
+            newIntervention.author = customerId.ToString();
+            newIntervention.customer_id = customerId;
+            newIntervention.building_id = buildingId;
+            newIntervention.batterie_id = batteryId;
+            newIntervention.column_id = columnId;
+            newIntervention.elevator_id = elevatorId;
+            newIntervention.report = description;
+            var intervention = _context.Interventions.Add(newIntervention);
+            _context.SaveChanges();
+            return new JsonResult(Ok(intervention));
+        }
 
 
     }
