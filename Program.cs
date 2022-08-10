@@ -15,8 +15,14 @@ builder.Services.AddDbContext<rocket_peterpanContext>(options => {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.Services.AddCors(p => p.AddPolicy("corspolicy", build=>
+{
+    build.WithOrigins("http://localhost:7024").AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
+app.UseCors("corspolicy");
 app.UseSwagger();
 app.UseSwaggerUI();
 
