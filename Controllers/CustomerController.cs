@@ -11,17 +11,17 @@ namespace Rockets_Elevators_web_api.Controllers
         private readonly rocket_peterpanContext _context;
         public CustomerController(rocket_peterpanContext context) => _context = context;
 
-        // gets all the customers name.
+        // gets all the customers.
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
             var customers = await _context.Customers.ToListAsync();
-            List<string> customrName = new List<string>();
-            for (int i = 0; i < customers.Count; i++ )
-            {
-                customrName.Add(customers[i].FullName);
-            }
-            return Ok(customrName);
+            // List<string> customrName = new List<string>();
+            // for (int i = 0; i < customers.Count; i++ )
+            // {
+            //     customrName.Add(customers[i].FullName);
+            // }
+            return Ok(customers);
 
         }
 
