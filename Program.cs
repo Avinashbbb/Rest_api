@@ -17,7 +17,7 @@ builder.Services.AddDbContext<rocket_peterpanContext>(options => {
 
 builder.Services.AddCors(p => p.AddPolicy("corspolicy", build=>
 {
-    build.WithOrigins("https://localhost:7024").AllowAnyMethod().AllowAnyHeader();
+    build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
 var app = builder.Build();
