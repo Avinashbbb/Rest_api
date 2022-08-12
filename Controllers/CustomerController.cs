@@ -109,16 +109,9 @@ namespace Rockets_Elevators_web_api.Controllers
             return Ok(customerElevatorId);
         }
 
-        [HttpPost("/post_intervention/{customrid}/{buildingid}/{batteryid}/{columnid}/{elevatorid}/{description}")]
-        public Intervention CreateIntervention(Intervention intervention, long customrid,long buildingid, long batteryid, long columnid, long elevatorid, string description)
+        [HttpPost]
+        public Intervention CreateIntervention(Intervention intervention)
         {
-            intervention.customer_id = customrid;
-            intervention.building_id = buildingid;
-            intervention.batterie_id = batteryid;
-            intervention.column_id = columnid;
-            intervention.elevator_id = elevatorid;
-            intervention.report = description;
-            intervention.author = "created by customer ID : " + customrid ;
             _context.Interventions.Add(intervention);
             _context.SaveChanges();
             return intervention;
